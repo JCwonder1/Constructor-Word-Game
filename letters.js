@@ -25,7 +25,9 @@ Letter.prototype.letterCheck = function(userGuess){
     }
 };
 
-var newLetter = new Letter("A");
-newLetter.letterCheck("A");
-newLetter.letterRevealer("A");
-console.log(newLetter);
+// var newLetter = new Letter("A");
+// newLetter.letterCheck("A");
+// newLetter.letterRevealer("A");
+// console.log(newLetter);
+
+module.exports = Letter;
