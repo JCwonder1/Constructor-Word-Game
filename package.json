@@ -1,0 +1,22 @@
+{
+  "name": "constructor-word-game",
+  "version": "1.0.0",
+  "description": "Guess letters untill you run out of guesses or you guess all the letters in the word.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCwonder1/Constructor-Word-Game.git"
+  },
+  "author": "Joseph Cannova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCwonder1/Constructor-Word-Game/issues"
+  },
+  "homepage": "https://github.com/JCwonder1/Constructor-Word-Game#readme",
+  "dependencies": {
+    "inquirer": "^6.2.2"
+  }
+}

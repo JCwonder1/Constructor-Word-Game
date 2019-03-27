@@ -11,11 +11,12 @@ function Word (randomWord){
     this.randomWord = randomWord.toLocaleLowerCase();
     this.arrayOfChar = randomWord.toLocaleLowerCase().split("");
     this.arrayOfObjects= [];
+    this.charObject();
 
 }
 
 //Method that instantiates an instance for each letter in the word
-Word.prototype.charObject = function(arr){
+Word.prototype.charObject = function(){
     this.arrayOfChar.forEach((element, i) =>{
         let letters = new Letter(element);
 
@@ -45,15 +46,15 @@ Word.prototype.letterCheck = function(letterGuessed){
 };
 
 //Instantiates the word constructor
-var gameWord = new Word("This is a Test");
+//var gameWord = new Word("This is a Test");
 
 //Creating the letter objects
-gameWord.charObject(this.arrayOfChar);
+//gameWord.charObject(this.arrayOfChar);
 
 
 //console.log(gameWord.arrayOfObjects);
-var letterGuessed = "i";
-gameWord.letterCheck(letterGuessed.toLocaleLowerCase());
-console.log(gameWord.arrayOfObjects);
+//var letterGuessed = "i";
+//gameWord.letterCheck(letterGuessed.toLocaleLowerCase());
+//console.log(gameWord.arrayOfObjects);
 
 module.exports = Word;
