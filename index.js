@@ -1,5 +1,7 @@
 var wordConstructor = require('./words');
 var inquirer = require('inquirer');
+const chalk = require('chalk');
+
 
 //Instantiating word constructor with random word
 var newWord = new wordConstructor("example");
@@ -18,7 +20,7 @@ function buildBoard (){
     newWord.arrayOfObjects.forEach((element)=>{
         board.push(element.correctLetter);
     });
-    console.log("Word!!!\n");
+
     console.log(board.join(" "));
     console.log("\n");
 };
@@ -27,17 +29,26 @@ function game () {
 
     inquirer.prompt(question).then((answers) => {
 
-
-
         newWord.letterCheck(answers.User_Letter_Guessed.toLocaleLowerCase());
         //console.log(answers.User_Letter_Guessed);
         //console.log(newWord.arrayOfObjects);
 
-        game();
         buildBoard();
+       if(newWord.score !== newWord.arrayOfObjects.length  && newWord.remainingGuess > 0) {
+           game();
+       }
+
+       if(newWord.remainingGuess === 0){
+           console.log(chalk.red("You lost.  Try again!"));
+       }
+       if(newWord.score === newWord.arrayOfObjects.length){
+           console.log(chalk.green("You Won!!"));
+       }
 
     });
 
 };
 buildBoard();
 game();
+
+//TODO: Add Video to portfolio

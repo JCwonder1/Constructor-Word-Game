@@ -5,6 +5,7 @@ function Letter(letter){
     this.letter = letter;
     this.correctLetter = "_";
     this.guessedCorrectly = false;
+    this.remainingGuess = 10;
 
 
 }

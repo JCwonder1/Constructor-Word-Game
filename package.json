@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JCwonder1/Constructor-Word-Game#readme",
   "dependencies": {
+    "chalk": "^2.4.2",
     "inquirer": "^6.2.2"
   }
 }
